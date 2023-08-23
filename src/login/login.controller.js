@@ -2,10 +2,10 @@ const loginModel = require('./login.model');
 
 class UserController {
 
-  validat = async(req, res) => {
-    const { name, password } = req.body;
-    const user = await loginModel.findUser(name, password);
-    res.status(200).send(user);
+  valid = async(req, res) => {
+    const { email, password } = req.body;
+    const user = await loginModel.findUser(email, password);
+    res.json(user);
   }
 
 }
